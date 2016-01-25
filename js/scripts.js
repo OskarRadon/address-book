@@ -4,9 +4,17 @@ function Contact(firstName,lastName) {
   this.addresses = [];
 }
 
+//adds the fullName method to a contact
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
+
+
+
+
+
+
+
 
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
