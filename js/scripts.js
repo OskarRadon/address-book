@@ -4,10 +4,21 @@ function Contact(firstName,lastName) {
   this.addresses = [];
 }
 
+function Address(street, city, state) {
+  this.street =  street;
+  this.city = city;
+  this.state = state;
+}
+
 //adds the fullName method to a contact
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
+//concats all address info
+Address.prototype.fullAddress = function() {
+  return this.street + ", " + this.city + ", " + this.state;
+}
+
 
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
