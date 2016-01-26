@@ -14,8 +14,6 @@ Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " + this.state;
 }
 
-
-
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
@@ -40,7 +38,7 @@ $(document).ready(function() {
 
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
-
+    // variables for contact names
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
